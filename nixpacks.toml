@@ -1,3 +1,0 @@
-# Configuración personalizada de Nixpacks para Railway
-[start]
-cmd = "php artisan migrate --force --seed && php-fpm -D && nginx -g 'daemon off;'"
