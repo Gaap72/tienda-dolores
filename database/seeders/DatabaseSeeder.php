@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Administrador',
                 'password' => Hash::make('password123'),
                 'role' => 'admin',
+                'pin_code' => '1234',
             ]
         );
 
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Cajero Principal',
                 'password' => Hash::make('password123'),
                 'role' => 'cajero',
+                'pin_code' => '4321',
             ]
         );
 
