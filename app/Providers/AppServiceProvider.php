@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // Fuerza el esquema HTTPS en producción para evitar problemas de mixed content con proxies (como Railway / Cloudflare)
-        if (config('app.env') === 'production' || app()->environment('production')) {
+        if (config('app.env') === 'production' || app()->environment('production') || env('APP_ENV') === 'production' || isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
             URL::forceScheme('https');
         }
 
